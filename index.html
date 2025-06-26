@@ -2,45 +2,80 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>OX YÊU VỢ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vợ Có Yêu Chồng Không?</title>
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-      flex-direction: column;
-      text-align: center;
+      min-height: 100vh;
+      background-color: #fff0f5;
     }
-    .message {
-      font-size: 2rem;
-      display: none;
+
+    h1 {
+      font-size: clamp(24px, 6vw, 48px);
+      color: #d6336c;
+      margin-bottom: 40px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 1em 2em;
+      font-size: clamp(16px, 4vw, 24px);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      min-width: 120px;
+    }
+
+    #yesBtn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    #yesBtn:hover {
+      background-color: #218838;
+    }
+
+    #noBtn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    #noBtn:hover {
+      background-color: #c82333;
+    }
+
+    #result {
+      margin-top: 40px;
+      font-size: clamp(20px, 5vw, 40px);
+      font-weight: bold;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <div id="message1" class="message">OX YÊU VỢ MÍA ẮMMM HEHE</div>
-  <div id="message2" class="message">VỢ CÓ YÊU CHỒNG HĂMMMMM</div>
-  <div id="message3" class="message">YÊU THÌ TỐI MÓC NHOA HIHI</div>
+  <h1>Vợ có yêu chồng không?</h1>
+  <div>
+    <button id="yesBtn">Có</button>
+    <button id="noBtn">Không</button>
+  </div>
+  <div id="result"></div>
 
   <script>
-    setTimeout(() => {
-      document.getElementById('message1').style.display = 'block';
-    }, 3000); // 3 giây
-
-    setTimeout(() => {
-      document.getElementById('message1').style.display = 'none';
-      document.getElementById('message2').style.display = 'block';
-    }, 11000); // 3 + 8 = 11 giây
-
-    setTimeout(() => {
-      document.getElementById('message2').style.display = 'none';
-      document.getElementById('message3').style.display = 'block';
-    }, 19000); // 11 + 8 = 19 giây
+    document.getElementById("yesBtn").onclick = function() {
+      document.body.innerHTML = "<h1 style='color:#28a745; font-size:clamp(24px, 6vw, 48px);'>Làm 2 móc</h1>";
+    };
+    document.getElementById("noBtn").onclick = function() {
+      document.body.innerHTML = "<h1 style='color:#dc3545; font-size:clamp(24px, 6vw, 48px);'>Móc đến khi nào thích thì thôi</h1>";
+    };
   </script>
 </body>
 </html>
