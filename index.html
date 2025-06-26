@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>OX YÊU VỢ</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+    .message {
+      font-size: 2rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="message1" class="message">OX YÊU VỢ MÍA ẮMMM HEHE</div>
+  <div id="message2" class="message">VỢ CÓ YÊU CHỒNG HĂMMMMM</div>
+  <div id="message3" class="message">YÊU THÌ TỐI MÓC NHOA HIHI</div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('message1').style.display = 'block';
+    }, 8000);
+
+    setTimeout(() => {
+      document.getElementById('message1').style.display = 'none';
+      document.getElementById('message2').style.display = 'block';
+    }, 16000);
+
+    setTimeout(() => {
+      document.getElementById('message2').style.display = 'none';
+      document.getElementById('message3').style.display = 'block';
+    }, 24000);
+  </script>
+</body>
+</html>
